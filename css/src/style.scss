@@ -1,0 +1,324 @@
+@import "_fonts.scss";
+@import "_variables.scss";
+
+
+body{
+
+}
+
+.ba-header {
+	font-family: $font-roboto;
+	font-weight: 900;
+	text-align: center;
+	text-transform: uppercase;
+
+		&__title {
+			color: $color-main;
+			font-size: 60px;
+			line-height: 1.1;
+			margin: 100px 0;
+			position: relative;
+
+			&:first-line {
+				font-size: 18px;
+				line-height: 24px;
+				font-family: $font-raleway;
+				font-weight: 500;
+				color: #898f8f;
+				letter-spacing: 0.02em;
+			}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 1px;
+			width: 450px;
+			background-color: $color-main;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -50px;
+			z-index: 1;
+
+			
+		}
+
+		&:before {
+			font-family: "Ionicons";
+			content: '\f315';
+			color: $color-main;
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			bottom: -50%;
+			transform: translate(-50%, 50%);
+			background-color: #fff;
+			z-index: 2;
+
+		}
+	}
+}
+
+.ba-slider {
+	position: relative;
+
+	&__arrows {
+
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		margin-top: -12px;
+		width: 13px;
+		height: 23px;
+
+		&:hover {
+		opacity: 0.7;
+	}
+
+		&--left {
+			background: url(../img/arrow-left.png) 50% no-repeat;
+			left: 20px;
+		}
+
+		&--right {
+			background: url(../img/arrow-right.png) 50% no-repeat;
+			right: 20px;
+		}
+	}
+
+	&__buttons {
+		margin: 40px auto 90px;
+		text-align: center;
+	}
+
+	&__list {
+		list-style: none;
+		padding-left: 0;
+	}
+	
+	&__item {
+		display: inline-block;
+		padding: 0 5px;
+		}
+
+	&__link {
+		display: block;
+		width: 12px;
+		height: 12px;
+		background-color: $color-main;
+		border: 1px solid #fff;
+		border-radius: 50%;
+
+		&--active {
+			background-color: #fff;
+			border: 1px solid $color-main;
+		}
+
+		&:hover {
+			background-color: #fff;
+			border: 1px solid $color-main;
+		}
+	}
+}
+
+.ba-card {
+
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		left: 50%;
+		background-color: $color-main;
+	}
+
+	&__photo-container {
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+		border: 1px solid $color-main;
+		overflow: hidden;
+		
+		img {
+			min-width: 100%;
+			min-height: 100%;
+			transition: transform ease .3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	
+
+	}
+
+	&__photo {
+		width: 50%;
+		float: left;
+		padding: 9px;
+		background: #fff url(../img/bg-corners-all.png) 50% no-repeat;
+		
+
+	}
+	&__info {
+		width: 50%;
+		float: left;
+		text-align: center;
+		min-height: 500px;
+	}
+	
+	&__name {
+		font-family: $font-roboto;
+		font-size: 36px;
+		line-height: 1;
+		letter-spacing: 0.02em;
+		color: $color-text;
+		margin: 17px 0 60px;
+		position: relative;
+	
+		&:after {
+			display: block;
+			position: absolute;
+			content: '';
+			width: 100px;
+			height: 1px;
+			top: 65px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $color-main;
+		}
+	}
+
+	&__occupation {
+		font-family: $font-raleway;
+		font-size: 24px;
+		font-weight: 400;
+		color: $color-text;
+		margin: 0;
+		}
+
+	&__social-icons {
+		margin: 30px 0;
+	}
+
+	&__icon {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		color: $color-social;
+		border: 2px solid $color-social;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 30px;
+		margin: 0 3px;
+
+		&:hover {
+			color: $color-main;
+			border: 2px solid $color-main;
+		}
+		}
+
+	&__text {
+		font-family: $font-raleway;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		color: #333333;
+		text-align: center;
+		margin: 0 0 20px;
+		padding: 0 80px;
+		position: relative;
+	}
+
+	&__line	{
+		fill: $color-main;
+		margin: 0 0 25px;
+	}
+	
+	&__button {
+		display: block;
+		width: 120px;
+		height: 25px;
+		font-family: $font-opensans;
+		font-weight: 700;
+		font-size: 14px;
+		text-align: center;
+		color: $color-text;
+		text-transform: uppercase;
+		text-decoration: none;
+		border: 1px solid $color-main;
+		padding: 4px;
+		margin: 0 auto;
+
+		&:hover {
+			background-color: $color-main;
+			color: #fff;
+		}
+	}
+}
+
+
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
